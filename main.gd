@@ -1,9 +1,9 @@
-extends Spatial
+extends Node3D
 
 # A reference to the shader selector.
-onready var shader_selector: OptionButton = get_node("ShaderSelector")
+@onready var shader_selector: OptionButton = get_node("ShaderSelector")
 # A reference to the collection of shaders.
-onready var shaders: Spatial = get_node("ScreenShaders")
+@onready var shaders: Node3D = get_node("ScreenShaders")
 
 # When the main scene is created we want to create the options and add them to
 # the selector.

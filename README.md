@@ -2,6 +2,8 @@
   <img width="471" height="231" src="https://raw.githubusercontent.com/robertcorponoi/graphics/master/tutorials/godot-night-vision-screen-shaders/night-vision-grainy-alt.png">
 </p>
 
+<h1 align="center">Adjusted for newer Godot and Shader Errors</h1>
+
 <h1 align="center">Godot Night Vision Screen Shaders</h1>
 
 <p align="center">A demo repository for an article on night vision screen shaders ported from Shadertoy.<p>

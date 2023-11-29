@@ -1,4 +1,4 @@
-extends KinematicBody
+extends CharacterBody3D
 
 var is_jumping: bool = false
 
@@ -19,14 +19,16 @@ func _process(_delta):
 		move.x += 1.0
 	
 	if Input.is_action_pressed("ui_select"):
-		if $RayCast.is_colliding() and not is_jumping:
+		if $RayCast3D.is_colliding() and not is_jumping:
 			move.y += 1.0
 			is_jumping = true
 	
-	if $RayCast.is_colliding() and is_jumping:
+	if $RayCast3D.is_colliding() and is_jumping:
 		is_jumping = false
 	
 	move.y -= 0.50
 	
 	var move_normalized = move.normalized()
-	var _m = move_and_slide(move_normalized)
+	set_velocity(move_normalized)
+	move_and_slide()
+	var _m = velocity
